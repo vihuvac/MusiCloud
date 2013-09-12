@@ -1,0 +1,43 @@
+{% block stylesheets %}
+    {% stylesheets filter="cssrewrite, yui_css, less"
+        'bundles/website/less/recovery.less'
+    %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block fos_user_content %}
+    <div class="shadow">
+        <div class="contenido" id="contenido">
+            <div class="image" id="image"></div>
+            <div class="text" id="text">
+                <div class="topspace" id="topspace"></div>
+                <div class="title" id="title"></div>
+                {% block request_response %}
+                    <div class="instructions" id="instructions">
+                        {{ 'frontend.resset_password.paragraph_first' | trans }}
+                    </div>
+                    <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+                        <div class="campos" id="campos">
+                            <div>
+                                <label for="username">{{ 'resetting.request.username'|trans({}, 'FOSUserBundle') }}</label>
+                                <input type="text" id="username" name="username" />
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary">
+                                    {{ 'resetting.request.submit'|trans({}, 'FOSUserBundle') }}
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                {% endblock request_response %}
+            </div>
+            {% if invalid_username is defined %}
+                <div class="notification_red">
+                    <img src="{{ asset('bundles/website/images/icons/notification_red.gif') }}" />
+                    {{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}, 'FOSUserBundle') }}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock fos_user_content %}

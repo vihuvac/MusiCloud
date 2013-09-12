@@ -1,0 +1,16 @@
+web/bundles/
+web/css/*
+web/js/*
+web/uploads/
+app/config/parameters.yml
+app/bootstrap.php.cache
+app/cache/*
+app/logs/*
+build/
+bin/
+vendor/
+composer.phar
+
+*.php~
+
+.DS_Store

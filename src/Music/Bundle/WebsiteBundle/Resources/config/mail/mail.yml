@@ -1,0 +1,3 @@
+parameters:
+    vihuvac_website.app.email_address: app.vihuvac@gmail.com
+    vihuvac_website.contact.email_address: victouk@gmail.com

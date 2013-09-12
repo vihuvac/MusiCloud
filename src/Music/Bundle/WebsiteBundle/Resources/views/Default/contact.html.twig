@@ -1,0 +1,42 @@
+{% extends 'WebsiteBundle::layout.html.twig' %}
+
+{% block fb_og %}
+	<meta property="og:url" content="http://www.victorhugo.com.ar/en/home"/>
+    <meta property="og:type" content="Website"/>
+    <meta property="og:title" content="From Buenos Aires Argentina to all around the world." />
+    <meta property="og:image" content="http://www.vihuvactools.com.ar/images/logos/w-og-logo.png" />
+    <meta property="og:site_name" content="Victor Hugo Valle Castillo Website" />
+    <meta property="og:description" content="The latest news about development and os support tips you want to know, just take a look at the website." />
+{% endblock %}
+
+{% block title %}
+	{{ 'frontend.base.project_name' | trans }}
+	-
+	{{ 'frontend.contact.header_title' | trans }}
+{% endblock %}
+
+{% block header %}
+	<div class="bs-header" id="content">
+		<div class="container">
+			<h1>{{ 'frontend.contact.header_title' | trans }}</h1>
+			<p class="lead">{{ 'frontend.home.description' | trans }}</p>
+		</div>
+	</div>
+{% endblock %}
+
+{% block sonata_page_body_tag %}
+    <body data-twttr-rendered="true">
+{% endblock %}
+
+{% block content %}
+	<div class="bs-old-docs">
+		<div class="container">
+			We've moved it to a new home while we push forward with Bootstrap 3....
+		</div>
+	</div>
+	<div class="container bs-docs-container">
+		<div ="row">
+			<h1>Hello World!<h1>
+		</div>
+	</div>
+{% endblock %}

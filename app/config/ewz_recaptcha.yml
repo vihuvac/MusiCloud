@@ -1,0 +1,5 @@
+ewz_recaptcha:
+    public_key:   6LdIieUSAAAAAIe-MjVkAI1_VIESew-UyJCpeKfI
+    private_key:  6LdIieUSAAAAACsYynXONjkE3SwjPRzAZVI84aJJ
+    secure:       true
+    locale_key:   kernel.default_locale

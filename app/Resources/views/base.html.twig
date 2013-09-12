@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{% block lang %}en{% endblock %}">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block fb_og %}{% endblock %}
+        <title>{% block title %}{% endblock %}</title>
+        {% include 'WebsiteBundle::_javascripts.html.twig' %}
+        {% include 'WebsiteBundle::_stylesheets.html.twig' %}
+        {% stylesheets filter="cssrewrite, yui_css, less"
+            'bundles/website/css/main.css'
+            'bundles/website/less/main.less'
+        %}
+            <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+        {% endstylesheets %}
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    {% block sonata_page_body_tag %}
+        <body>
+    {% endblock %}
+        {% block body %}
+            {% block header %}{% endblock %}
+            {% block main_content %}{% endblock %}
+            {% block footer %}{% endblock %}
+        {% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

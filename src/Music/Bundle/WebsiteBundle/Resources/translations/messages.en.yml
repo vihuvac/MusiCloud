@@ -1,0 +1,49 @@
+backend:
+    sonata_admin:
+        btn_back_home: "Back to website"
+
+frontend:
+    login:
+        question_first: "Forgot your password?"
+        question_second: "Are you new in the website?"
+        error_alert: "Error!"
+
+    registration:
+        sign_up: "Sign up"
+        registration_header: "New User Creation"
+
+    resset_password:
+        paragraph_first: "Please enter your username or email address in order to restore your password."
+
+    base:
+        author_name: "Victor Hugo"
+        author_surname: "Valle Castillo"
+        project_type: "Website"
+        project_name: "Music in the Cloud"
+        project_date_from_to: "2013"
+
+    navbar:
+        home: "Home"
+        about: "About"
+        categories: "Categories"
+        contact: "Contact"
+        signin: "Sign in"
+        language: "Language:"
+        language_english: "English"
+        language_spanish: "Spanish"
+
+    home:
+        header_title: "Homepage"
+        description: "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development."
+
+    about:
+        header_title: "About the website"
+        description: "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development."
+
+    categories:
+        header_title: "Categories"
+        description: "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development."
+
+    contact:
+        header_title: "Contact"
+        description: "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development."

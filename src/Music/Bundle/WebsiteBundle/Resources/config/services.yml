@@ -1,0 +1,18 @@
+imports:
+    - { resource: mail/mail.yml }
+
+parameters:
+    music_website.locale_listener.class: Music\Bundle\WebsiteBundle\Listener\LocaleListener
+
+services:
+    music_website.locale_listener:
+        class: %music_website.locale_listener.class%
+        arguments: [%locale%]
+        tags:
+            -  { name: kernel.event_subscriber }
+
+    music_website.user.registration.form.type:
+        class: Music\Bundle\WebsiteBundle\Form\Type\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: website_user_registration }

@@ -1,0 +1,11 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block fos_user_content %}
+	<div class="container container-margin">
+	    <div class="row">
+	        <div class="span-width offset4 well">
+				{% include "FOSUserBundle:Registration:register_content.html.twig" %}
+			</div>
+		</div>
+	</div>
+{% endblock fos_user_content %}

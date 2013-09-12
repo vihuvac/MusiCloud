@@ -1,0 +1,9 @@
+{% block fos_user_content %}
+	<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
+		<legend>{{ 'frontend.registration.registration_header' | trans }}</legend>
+	    {{ form_widget(form) }}
+	    <div class="margin-height">
+	        <button type="submit" class="btn btn-primary">{{ 'registration.submit'|trans({}, 'FOSUserBundle') }}</button>
+	    </div>
+	</form>
+{% endblock fos_user_content %}

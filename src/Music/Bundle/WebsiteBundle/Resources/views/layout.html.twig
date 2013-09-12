@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block main_content %}
+	<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+    	<div class="container">
+	        <a class="navbar-brand" href="{{ path('music_website_default_index') }}">{{ 'frontend.base.project_name' | trans }}</a>
+	        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+		        {% block main_menu %}
+					{{ knp_menu_render('WebsiteBundle:Builder:mainMenu', { 'nav_type': 'navbar', 'allow_safe_labels': true }) }}
+		        {% endblock %}
+
+		        {% block right_menu %}
+					{{ knp_menu_render('WebsiteBundle:Builder:rightMenu', { 'nav_type': 'navbar', 'pull': 'right', 'allow_safe_labels': true }) }}
+		        {% endblock %}
+		    </nav>
+	    </div>
+	</header>
+	{% block content %}{% endblock %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
