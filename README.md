@@ -33,7 +33,7 @@ To work on the website you need to fork the base repository into your github acc
 base repository directly.
 
 Whenever a new feature/fix/improvement/whatever is requested/proposed, you FIRST need to create an
-issue in [GITHUB](https://github.com/vihuvac/website) if that is not already made.
+issue in [GITHUB](https://github.com/vihuvac/MusiCloud) if that is not already made.
 
 After you get the issue code (e.g. WEBSITE-999), you create a local branch with that name
 
